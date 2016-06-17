@@ -1,6 +1,12 @@
 module Main where
 
-import Lib
+import System.Plugins.Hotswap as SPH
 
 main :: IO ()
-main = putStrLn . show $ integerValue13
+main = do
+        putStrLn "Start."
+
+        o <- SPH.newPlugin "Lib.o" ["dist/build"] "integerNumber13"
+
+        putStrLn "Finish."
+
