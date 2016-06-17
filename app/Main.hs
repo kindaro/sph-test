@@ -6,7 +6,6 @@ main :: IO ()
 main = do
         putStrLn "Start."
 
-        o <- SPH.newPlugin "Lib.o" ["dist/build"] "integerNumber13"
+        mod <- SPH.newPlugin "Lib.o" ["dist/build"] "integerValue13"
 
         putStrLn "Finish."
-
